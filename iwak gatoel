@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iwak Gatul - Toko Ikan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">🐟 Iwak Gatul</h1>
+
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produk">Produk</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h2>Iwak Gatul Segar & Berkualitas</h2>
+            <p>
+                Nikmati ikan gatul pilihan dengan kualitas terbaik
+                dan harga yang terjangkau.
+            </p>
+            <a href="#produk" class="btn">Lihat Produk</a>
+        </div>
+    </section>
+
+    <!-- Produk -->
+    <section id="produk" class="produk">
+        <h2>Produk Kami</h2>
+        <p class="subtitle">Pilih ikan gatul favoritmu</p>
+
+        <div class="produk-container">
+
+            <div class="card">
+                <div class="ikan">🐟</div>
+                <h3>Iwak Gatul Segar</h3>
+                <p>Ikan gatul segar pilihan dengan kualitas terbaik.</p>
+                <h4>Rp15.000 / 500 gram</h4>
+                <a href="#kontak" class="btn">Pesan Sekarang</a>
+            </div>
+
+            <div class="card">
+                <div class="ikan">🐠</div>
+                <h3>Iwak Gatul Premium</h3>
+                <p>Ikan gatul pilihan dengan ukuran lebih besar dan segar.</p>
+                <h4>Rp25.000 / 1 kg</h4>
+                <a href="#kontak" class="btn">Pesan Sekarang</a>
+            </div>
+
+            <div class="card">
+                <div class="ikan">🍽️</div>
+                <h3>Iwak Gatul Siap Masak</h3>
+                <p>Sudah dibersihkan sehingga praktis untuk langsung dimasak.</p>
+                <h4>Rp20.000 / 500 gram</h4>
+                <a href="#kontak" class="btn">Pesan Sekarang</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Tentang -->
+    <section id="tentang" class="tentang">
+        <h2>Tentang Iwak Gatul</h2>
+        <p>
+            Iwak Gatul menyediakan ikan gatul segar dan berkualitas
+            dengan harga terjangkau. Kami berusaha memberikan produk
+            terbaik kepada pelanggan.
+        </p>
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak" class="kontak">
+        <h2>Hubungi Kami</h2>
+        <p>Ingin memesan Iwak Gatul? Hubungi kami sekarang!</p>
+
+        <div class="kontak-box">
+            <p>📱 WhatsApp: 085743437244</p>
+            <p>📍 Lokasi: jetis, Mojokerto</p>
+            <p>📧 Email: asfiyak1927@gmail.com
