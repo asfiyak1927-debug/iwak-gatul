@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iwak Gatul Store</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background: #176b3a;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: linear-gradient(
+                rgba(0,0,0,0.45),
+                rgba(0,0,0,0.45)
+            ),
+            url("https://images.unsplash.com/photo-1544943910-4c1dc44aab44?auto=format&fit=crop&w=1200&q=80");
+
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        .container {
+            width: 85%;
+            margin: 40px auto;
+        }
+
+        .judul {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .judul h2 {
+            color: #176b3a;
+            font-size: 30px;
+        }
+
+        .produk-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .produk {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .produk:hover {
+            transform: translateY(-7px);
+        }
+
+        .produk img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .produk-info {
+            padding: 20px;
+        }
+
+        .produk-info h3 {
+            color: #176b3a;
+            margin-bottom: 10px;
+        }
+
+        .harga {
+            color: #e67e22;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 12px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 7px;
+            background: #176b3a;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0e4d29;
+        }
+
+        .keranjang {
+            background: white;
+            margin-top: 50px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .keranjang h2 {
+            color: #176b3a;
+            margin-bottom: 15px;
+        }
+
+        #daftarKeranjang {
+            margin-bottom: 15px;
+        }
+
+        footer {
+            margin-top: 50px;
+            background: #176b3a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .checkout {
+            background: #e67e22;
+            margin-top: 10px;
+        }
+
+        .checkout:hover {
+            background: #c65f0d;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>🐟 Iwak Gatul Store</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#produk">Produk</a>
+            <a href="#keranjang">Keranjang</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div>
+            <h2>Iwak Gatul Segar & Lezat</h2>
+            <p>Rasa khas, harga bersahabat!</p>
+        </div>
+    </section>
+
+    <!-- PRODUK -->
+    <section class="container" id="produk">
+
+        <div class="judul">
+            <h2>Produk Kami</h2>
+            <p>Pilih Iwak Gatul favoritmu</p>
+        </div>
+
+        <div class="produk-container">
+
+            <!-- Produk 1 -->
+            <div class="produk">
+                <img src="https://images.unsplash.com/photo-1534766555764-ce878a5e3a2b?auto=format&fit=crop&w=600&q=80">
+
+                <div class="produk-info">
+                    <h3>Iwak Gatul Segar</h3>
+                    <p>Iwak gatul segar pilihan dengan kualitas terbaik.</p>
+
+                    <div class="harga">
+                        Rp15.000
+                    </div>
+
+                    <button onclick="tambahKeranjang('Iwak Gatul Segar', 15000)">
+                        + Keranjang
+                    </button>
+                </div>
+            </div>
+
+            <!-- Produk 2 -->
+            <div class="produk">
+                <img src="https://images.unsplash.com/photo-1510130387422-82bed34b37e9?auto=format&fit=crop&w=600&q=80">
+
+                <div class="produk-info">
+                    <h3>Iwak Gatul Goreng</h3>
+                    <p>Gurih dan renyah, cocok untuk lauk makan.</p>
+
+                    <div class="harga">
+                        Rp20.000
+                    </div>
+
+                    <button onclick="tambahKeranjang('Iwak Gatul Goreng', 20000)">
+                        + Keranjang
+                    </button>
+                </div>
+            </div>
+
+            <!-- Produk 3 -->
+            <div class="produk">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=600&q=80">
+
+                <div class="produk-info">
+                    <h3>Iwak Gatul Pedas</h3>
+                    <p>Olahan iwak gatul dengan bumbu pedas khas.</p>
+
+                    <div class="harga">
+                        Rp22.000
+                    </div>
+
+                    <button onclick="tambahKeranjang('Iwak Gatul Pedas', 22000)">
+                        + Keranjang
+                    </button>
+                </div>
+            </div>
+
+            <!-- Produk 4 -->
+            <div class="produk">
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80">
+
+                <div class="produk-info">
+                    <h3>Paket Keluarga</h3>
+                    <p>Paket iwak gatul untuk dinikmati bersama keluarga.</p>
+
+                    <div class="harga">
+                        Rp50.000
+                    </div>
+
+                    <button onclick="tambahKeranjang('Paket Keluarga', 50000)">
+                        + Keranjang
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- KERANJANG -->
+    <section class="container" id="keranjang">
+
+        <div class="keranjang">
+
+            <h2>🛒 Keranjang Belanja</h2>
+
+            <div id="daftarKeranjang">
+                Keranjang masih kosong.
+            </div>
+
+            <h3>Total: Rp<span id="total">0</span></h3>
+
+            <button class="checkout" onclick="checkout()">
+                Checkout
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Iwak Gatul Store</p>
+        <p>Pesan sekarang dan nikmati iwak gatul favoritmu!</p>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        let keranjang = [];
+        let total = 0;
+
+        function formatRupiah(angka) {
+            return angka.toLocaleString("id-ID");
+        }
+
+        function tambahKeranjang(nama, harga) {
+
+            keranjang.push({
+                nama: nama,
+                harga: harga
+            });
+
+            total += harga;
+
+            tampilkanKeranjang();
+
+            alert(nama + " berhasil ditambahkan ke keranjang!");
+        }
+
+        function tampilkanKeranjang() {
+
+            let daftar = document.getElementById("daftarKeranjang");
+
+            if (keranjang.length === 0) {
+                daftar.innerHTML = "Keranjang masih kosong.";
+                return;
+            }
+
+            let html = "";
+
+            keranjang.forEach(function(item, index) {
+
+                html += `
+                    <div style="
+                        display:flex;
+                        justify-content:space-between;
+                        padding:10px 0;
+                        border-bottom:1px solid #ddd;
+                    ">
+                        <span>
+                            ${index + 1}. ${item.nama}
+                        </span>
+
+                        <b>
+                            Rp${formatRupiah(item.harga)}
+                        </b>
+                    </div>
+                `;
+
+            });
+
+            daftar.innerHTML = html;
+
+            document.getElementById("total").innerText =
+                formatRupiah(total);
+        }
+
+        function checkout() {
+
+            if (keranjang.length === 0) {
+                alert("Keranjang masih kosong!");
+                return;
+            }
+
+            let pesan = "Halo, saya ingin membeli:%0A%0A";
+
+            keranjang.forEach(function(item, index) {
+
+                pesan +=
+                    (index + 1) +
+                    ". " +
+                    item.nama +
+                    " - Rp" +
+                    formatRupiah(item.harga) +
+                    "%0A";
+
+            });
+
+            pesan +=
+                "%0ATotal: Rp" +
+                formatRupiah(total);
+
+            /*
+                GANTI NOMOR DI BAWAH DENGAN NOMOR WHATSAPP TOKO.
+                Contoh format: 628123456789
+            */
+
+            let nomorWhatsApp = "628123456789";
+
+            window.open(
+                "https://wa.me/" +
+                nomorWhatsApp +
+                "?text=" +
+                pesan,
+                "_blank"
+            );
+        }
+
+    </script>
+
+</body>
+</html>
